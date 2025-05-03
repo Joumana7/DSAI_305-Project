@@ -23,8 +23,17 @@ For each of the six models, we applied the following four interpretability techn
 2.  **Individual Conditional Expectation (ICE):** Show the dependence of the prediction on a feature for each individual instance.
 3.  **SHAP (SHapley Additive exPlanations):** Provide local explanations for individual predictions by quantifying the contribution of each feature.
 4.  **Permutation Feature Importance (PFI):** Assess the global importance of features by measuring the decrease in model performance when a feature's values are randomly shuffled.
-5.  **Desision Tree Visualization:**Visualize each step leads to the desicion predictied by the model.
+5.  **Desision Tree Visualization:** Visualize each step leads to the desicion predictied by the model.
 
 ## Project Structure
 
-The project likely contains the following structure (adjust based on your actual implementation):
+The project likely contains the following structure (adjust based on your actual implementation): data/
+│   └── [('train_transaction.csv') ('train_identity.csv')('test_transaction.csv')('test_identity.csv')
+]
+├── notebooks/
+│   ├── logistic_regression_interpretation.ipynb
+│   ├── naive_bayes_interpretation.ipynb
+│   ├── decision_tree_interpretation.ipynb
+│   ├── random_forest_interpretation.ipynb
+│   ├── xgboost_interpretation.ipynb
+│   └── svc_interpretation.ipynb
