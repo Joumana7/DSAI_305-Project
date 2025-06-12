@@ -1,33 +1,122 @@
-# DSAI 305 Project
+## Credit Card Fraud Detection using Machine Learning and Explainable AI
 
-# Interpretable Machine Learning for Classification
+Credit Card Fraud Detection on IEEE-CIS Dataset: A Comparative and Explainable Machine Learning Approach
 
-This project explores the interpretability of several machine learning models used for a classification task. We trained and analyzed six different classifiers using four distinct Explainable AI (XAI) techniques for each model.The problem is Fraud detection for ieee-fraud detection dataset.
+Abstract
 
-## Models Used
+This project performs a comparative analysis of several machine learning models applied to the IEEE-CIS Fraud Detection dataset. We explore the efficacy of Logistic Regression, Random Forest, SVM, Decision Tree, Naive Bayes, MLP, and XGBoost in identifying fraudulent transactions in a highly imbalanced dataset. We also incorporate interpretability techniques like SHAP, LIME, PDP, ICE, and PFI to explain and justify model decisions. Our results highlight the effectiveness of ensemble models and the importance of explainable AI in fraud detection.
 
-The following machine learning models were implemented and evaluated:
+Table of Contents
 
-1.  **Logistic Regression**
-2.  **Naive Bayes**
-3.  **Decision Tree**
+Introduction
 
-## Explainable AI (XAI) Techniques
+Related Work
 
-For each of the six models, we applied the following four interpretability techniques to gain insights into their decision-making processes:
+Methodology
 
-1.  **Partial Dependence Plots (PDP):** Visualize the average effect of a feature on the model's prediction.
-2.  **Individual Conditional Expectation (ICE):** Show the dependence of the prediction on a feature for each individual instance.
-3.  **SHAP (SHapley Additive exPlanations):** Provide local explanations for individual predictions by quantifying the contribution of each feature.
-4.  **Permutation Feature Importance (PFI):** Assess the global importance of features by measuring the decrease in model performance when a feature's values are randomly shuffled.
-5.  **Desision Tree Visualization:** Visualize each step leads to the desicion predictied by the model.
+Installation
 
-## Project Structure
+Usage
 
-The project likely contains the following structure (adjust based on your actual implementation): data/
-│   └── [('train_transaction.csv') ('train_identity.csv')('test_transaction.csv')('test_identity.csv')
-]
-├── notebooks/
-│   ├── logistic_regression_interpretation.ipynb
-│   ├── naive_bayes_interpretation.ipynb
-│   ├── decision_tree_interpretation.ipynb
+Results and Findings
+
+Explainability & Interpretability
+
+Conclusion
+
+References
+
+Introduction
+
+This project addresses the real-world problem of credit card fraud detection using machine learning and explainable AI. It focuses on answering two research questions:
+
+RQ1: How do traditional ML models perform on a highly imbalanced dataset compared to previous research?
+
+RQ2: Which model balances accuracy and interpretability effectively?
+
+Dataset
+
+We use the IEEE-CIS dataset from Kaggle, containing over 590,000 transaction records, with anonymized features and a binary target indicating fraudulent or legitimate transactions.
+
+Related Work
+
+Previous research has shown high accuracy with models like Random Forest and XGBoost, but most studies neglect interpretability. Our project bridges this gap by integrating XAI tools.
+
+Methodology
+
+Preprocessing
+
+Missing Value Handling: Dropped or imputed.
+
+Feature Scaling: Standard Scaler / MinMax.
+
+Categorical Encoding: Label/One-Hot.
+
+Train-Test Split: 80-20 split with stratification.
+
+Imbalance Handling: SMOTE, class weighting.
+
+Models Implemented
+
+Logistic Regression
+
+Random Forest
+
+Decision Tree
+
+Naive Bayes
+
+Multi-Layer Perceptron
+
+
+Hyperparameter Tuning
+
+Grid Search / Randomized Search + 5-fold CV.
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Usage
+
+Run the colab files 
+
+
+Results and Findings
+
+Best Performance: XGBoost and Random Forest achieved the highest AUC and F1 scores.
+
+Interpretability: Decision Trees and Logistic Regression were easier to explain but less accurate.
+
+Class Imbalance: SMOTE improved model sensitivity significantly.
+
+Explainability & Interpretability
+
+SHAP: Revealed top influencing features like TransactionAmt and ProductCD.
+
+LIME: Explained individual high-risk transactions.
+
+PDP & ICE: Showed marginal and individual feature effects.
+
+PFI: Validated feature importance rankings.
+
+Visual outputs are saved in the outputs/ folder.
+
+Conclusion
+
+This study confirms that ensemble models like XGBoost outperform others in fraud detection tasks but at the cost of interpretability. Explainable AI tools are essential for real-world deployment, enhancing model transparency and trust.
+
+References
+
+Dornadula & Geetha (2019)
+
+Varmedja et al. (2019)
+
+Thennakoon et al. (2019)
+
+Alarfaj et al. (2022)
+
+Vuppula (2021)
+
+Mittal & Tyagi (2019)
