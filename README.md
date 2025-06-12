@@ -11,9 +11,6 @@ The following machine learning models were implemented and evaluated:
 1.  **Logistic Regression**
 2.  **Naive Bayes**
 3.  **Decision Tree**
-4.  **Random Forest**
-5.  **XGBoost**
-6.  **SVC (Support Vector Classifier)**
 
 ## Explainable AI (XAI) Techniques
 
@@ -34,6 +31,3 @@ The project likely contains the following structure (adjust based on your actual
 │   ├── logistic_regression_interpretation.ipynb
 │   ├── naive_bayes_interpretation.ipynb
 │   ├── decision_tree_interpretation.ipynb
-│   ├── random_forest_interpretation.ipynb
-│   ├── xgboost_interpretation.ipynb
-│   └── svc_interpretation.ipynb
